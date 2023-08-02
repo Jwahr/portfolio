@@ -1,0 +1,278 @@
+/*color scheme:
+DARK BLUE: #205E61
+LIGHT BLUE: #3F979B
+LIGHTER BLUE: #8BF5FA
+YELLOW:#F9F54B
+*/
+
+/*THE BOX MODEL:SEC5-VID44*/
+/*
+1. WIDTH, HIGHT OF THE ELEMENT
+2. BORDER OF THE ELEMENT
+3.PADDING; THE SPACE BETWEEN THE ELEMENT EDGES AND THE CONTENT
+4.MARGING;THESPACE OUTSIDE THE BORDER. THE OUTTER SPACE BETWEEN ONE ELEMENT AND THE OTHER
+*/
+
+/**********************************TAG SELECTORS***************************************/
+div{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:azure;
+    background-image: url('../images/my-site-images/masaaki-komori-7xP5BJ34ybg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /*by defaul, the body has a margin of 8px from all sides.*/
+    text-align: center; /*all text will be centred except the text that you manually specify a width to. hence, we need another property called margin to keep everything centred even if something has a specified width*/
+    /*font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    when you specify the font-family, there is no guarantee that all users will get the same output and see the same font you specified because this depened on whether or not their OS can read it. if it doesn't, then it will go for another font.
+    ** from this website https://www.cssfontstack.com/ you can see how likely is it for windows and mac users to see a specific font style*/
+    font-family: 'Source Sans Pro', sans-serif; /*used from google fonts*/
+    color:#40514E;
+}
+h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 80px;
+    color:  #11999E;
+    line-height: 1; /*the space between this line and what's above and below it. 1 is default, 2 is double*/
+}
+
+h2{
+    font-weight: normal;
+    color:  #66BFBF;
+    padding: 20px;
+}
+h3{
+    color: #11999E;
+}
+a{
+    color: #11999E;
+    padding: 10px;
+    text-decoration: none;
+}
+a:hover{
+    color: #eaf6f6;
+}
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    border-color:#629698;
+    border-width: 15px;
+    width: 10%;
+}
+p{
+    line-height: 2;
+}
+/**********************************CONTAINERS   STYLE***************************************/
+.logo{
+    width: 40px;
+    margin: 0;
+    padding: 0;
+}
+.header-links{
+    display: flex;
+    background-color: #1e484a;
+    justify-content: space-around;
+    margin: 0;
+    
+}
+.header-links > a{
+    width: 200px;
+}
+.header-links > a:hover{
+    background-color:#11999e
+}
+.pro{
+    text-decoration:underline;
+}
+.top-container{
+    /* height: 500px; if you don't specify any hight then it is automatically going to be 100% the hight of its content. if you purposelly specify a specific hight, then if the content's hight is more, it will be outside the borders of the block/div */
+    /* background-color: #fffec6; */
+    color: #3F979B;
+    padding-top:50px;
+    padding-bottom:300px;
+}
+.middle-container{
+    /* background-color:#defdff; */
+    padding: 100px;
+    color: #1e484a;
+ 
+}
+.intro{
+    width: 50%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.skill-row{
+    width: 50%;
+    margin: 100px auto ; /*because we specfied the width of this class, the alignment of it was back to default -left-. to return it to center, set the top-bottom margein to the value you want, and set the left-right margins to auto*/
+    text-align: left;
+}
+/* .sw{
+    color: white;
+} */
+
+.exp{
+    padding-top:50px;
+
+    background-color: #66BFBF;
+    color: white;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+.company-name{
+    color: white;
+    margin: 0;
+}
+.interest-row{
+    display: flex;
+    margin: 100px auto ; /*because we specfied the width of this class, the alignment of it was back to default -left-. to return it to center, set the top-bottom margein to the value you want, and set the left-right margins to auto*/
+
+    flex-wrap: wrap;
+    width: 50%;
+}
+.interst-content{
+    width: 70%;
+    text-align: left;
+}
+.datamining-txt{
+    text-align: right;
+
+}
+.contact-img{
+    width: 80px;
+}
+.contact-div{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px;
+    background-color: white;
+}
+.img{
+    width: 25%;
+    height: 25%;
+    float: left;
+    margin: 100px auto ; /*because we specfied the width of this class, the alignment of it was back to default -left-. to return it to center, set the top-bottom margein to the value you want, and set the left-right margins to auto*/
+}
+.contact-message{
+    width: 50%;
+    margin:auto;
+    margin-bottom: 30px;
+}
+.btn {
+    background:  #11cdd4;
+    background-image: -webkit-linear-gradient(top,  #11cdd4,  #11999e);
+    background-image: -moz-linear-gradient(top,  #11cdd4,  #11999e);
+    background-image: -ms-linear-gradient(top,  #11cdd4,  #11999e);
+    background-image: -o-linear-gradient(top,  #11cdd4,  #11999e);
+    background-image: linear-gradient(to bottom,  #11cdd4,  #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Source Sans Pro', sans-serif; /*used from google fonts*/
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
+.bottom-container{
+    background-color: #66BFBF;
+    padding: 20px;
+                                                      
+}
+
+.copyright{
+    color: white;
+    font-size: 15px;
+    margin: 20px 0;
+}
+/**********************************IMAGES   STYLE***************************************/
+.down-cloud-img{
+    position: absolute;
+    left: 250px;
+    width: 400px;
+
+}
+.up-cloud-img{
+    position: relative;
+    left: 350px;
+
+}
+.profile-img{
+    width: 200px;
+}
+.html-img{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.hacker-img{
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+}
+@media screen and (max-width: 700px){
+    hr{
+        border-style: none;
+        border-top-style: dotted;
+        border-color:#629698;
+        border-width: 7px;
+        width: 10%;
+    
+    }
+    .intro{
+        width: 100%;
+    }
+    .contact-message{
+        width: 100%;
+        margin:auto;
+        margin-bottom: 30px;
+    }
+    .skill-row{
+        width: 100%;
+        margin: 100px auto ; /*because we specfied the width of this class, the alignment of it was back to default -left-. to return it to center, set the top-bottom margein to the value you want, and set the left-right margins to auto*/
+        text-align: left;
+        margin-top: 10px;
+
+    }
+    .down-cloud-img{
+        position: absolute;
+        left: 280px;
+        bottom: 300px;
+    
+    }
+    .mountain-img{
+        width: 80vw;
+    }
+    .up-cloud-img{
+        position: relative;
+        left: 10px;
+    
+    }
+    .profile-img{
+        width: 200px;
+    }
+    .html-img{
+        width: 100%;
+
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+    .hacker-img{
+        width: 100%;
+        margin-left: 30px;
+    }    
+}
